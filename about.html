@@ -84,8 +84,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Ana Sayfa</a>
-                <a href="about.html" class="nav-item nav-link active">Servis</a>
-                <a href="service.html" class="nav-item nav-link">Iletisim</a>
+                <a href="service.html" class="nav-item nav-link active">Servis</a>
+                <a href="contact.html" class="nav-item nav-link">İletişim</a>
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -340,31 +340,33 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sümer, Kıyıboyu Cd. No: 38/B, 01140 Seyhan/Adana, Türkiye</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+90 322 227 33 15</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/kartallastik?igsh=NGVqcDd4cGRyanlx"><i class="fab fa-instagram"></i></a>
+                
+                        <!--
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Opening Hours</h4>
-                    <h6 class="text-light">Monday - Friday:</h6>
-                    <p class="mb-4">09.00 AM - 09.00 PM</p>
-                    <h6 class="text-light">Saturday - Sunday:</h6>
-                    <p class="mb-0">09.00 AM - 12.00 PM</p>
+                    <h4 class="text-light mb-4">Acilis Saatleri</h4>
+                    <h6 class="text-light">Pazartesi - Cumartesi:</h6>
+                    <p class="mb-4">08.00 - 20.00</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Diagnostic Test</a>
-                    <a class="btn btn-link" href="">Engine Servicing</a>
-                    <a class="btn btn-link" href="">Tires Replacement</a>
-                    <a class="btn btn-link" href="">Oil Changing</a>
-                    <a class="btn btn-link" href="">Vacuam Cleaning</a>
+                    <h4 class="text-light mb-4">Servislerimiz</h4>
+                    <a class="btn btn-link service-link" data-target="#tab-pane-1" href="#services">Arıza Tespiti</a>
+                    <a class="btn btn-link service-link" data-target="#tab-pane-2" href="#services">Motor Bakımı</a>
+                    <a class="btn btn-link service-link" data-target="#tab-pane-3" href="#services">Lastik Değişimi</a>
+                    <a class="btn btn-link service-link" data-target="#tab-pane-4" href="#services">Yağ Değişimi</a>
                 </div>
+                <!--
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
@@ -373,26 +375,7 @@
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div>
-                </div>
+                -->
             </div>
         </div>
     </div>
@@ -414,9 +397,32 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    
+    <!-- Hizmet Linkleri Scripti -->
+    <script>
+    document.querySelectorAll('.service-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const scrollTarget = document.querySelector(this.getAttribute('href'));
+            scrollTarget.scrollIntoView({ behavior: 'smooth' });
+
+            document.querySelectorAll('.nav-link').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('show');
+                pane.classList.remove('active');
+            });
+            const targetPane = this.getAttribute('data-target');
+            document.querySelector(`.nav-link[data-bs-target="${targetPane}"]`).classList.add('active');
+            document.querySelector(targetPane).classList.add('show');
+            document.querySelector(targetPane).classList.add('active');
+        });
+    });
+    </script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+
 
 </html>

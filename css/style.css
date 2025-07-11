@@ -245,7 +245,7 @@
 
 /*** Facts ***/
 .fact {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/black.png);
+    background: linear-gradient(#000000);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -364,7 +364,7 @@
 
 /*** Footer ***/
 .footer {
-    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/black.png) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9));
     background-size: cover;
 }
 
